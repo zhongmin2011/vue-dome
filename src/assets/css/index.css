@@ -1,0 +1,901 @@
+@media screen and (max-width: 1920px) {
+    /* 弹窗 */
+    .list{ 
+        display: none;
+        }
+    .list span{
+        display: none;
+        }
+    .smart-list{
+        display: none;
+        }
+    .yemei{
+      width: 100%;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      max-height: 640px;
+      background-position: center;
+    }
+    .yemei .top-container{
+        max-width: 1400px;
+       width: 100%;
+        margin: 0 auto;
+        height: 640px;	
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        /* border:1px black solid; */
+    }
+    .yemei .top-container .header{
+        max-width: 1400px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .yemei .top-container .header img{
+        width: 160px;
+        }
+    .yemei .top-container .header .nav-fu{
+      width: 906px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .yemei .top-container .header.line{
+        height: 4px;
+        width: 120px;
+        color:  #1CB3FC;
+        display: block;
+        /* border-bottom: 4px solid; */
+    }
+    .yemei .top-container .header .nav-fu .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        flex: 1;
+    }
+    .yemei .top-container .header .nav-fu .nav .nav-child{
+        color:#fff;
+        font-weight: bold; 
+        line-height: 120px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: '思源';
+    }
+    .yemei .top-container .header .nav-fu .nav .nav-child:hover
+    {
+        border-bottom: 4px #1CB3FC solid;
+    }
+    .yemei .top-container .header .nav-fu .nav .nav-child
+    .yemei .top-container .header .nav-fu .login{
+        width: 220px;
+        display: flex;
+        justify-content: space-between;	
+    }
+    .yemei .top-container .header .nav-fu .login .btn{
+        width: 100px;
+        height: 40px;
+        border-radius: 4px;
+        font-family: '思源';
+        font-size: 16px;
+        background-color: rgba(95, 95, 95, 0);
+        color: #fff;
+        border: 1px white solid;
+    }
+    .yemei .top-container .header .nav-fu .login .btn:hover,
+    .yemei .top-container .header .nav-fu .login .btn:active {
+        background-color: #1CB3FC;
+        border: 0;
+        }
+    
+    .top-container .header-body{
+        max-width: 1440px;
+        width: 100%;
+        margin:0 auto;
+        /* border: 1px green solid; */
+        display: flex;
+        height: 520px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 120px;	
+    }
+    .top-container .header-body .header-text{
+        display: flex;
+        justify-content: flex-start;
+        align-content: space-between;
+        flex-direction: column;
+        height: 304px;
+    }
+    .top-container .header-body .header-text .title{
+        font-family: '思源';
+        font-size: 48px;
+        color: white;
+        line-height: 57px;
+    }
+    .top-container .header-body .header-text .text{
+        margin-top: 50px;
+        font-family: '思源';
+        font-size: 24px;
+        color: white;
+        width: 840px;
+        line-height: 27px;
+    }
+    .top-container .header-body .btn-fu{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 99px;
+        /* border: 1px green solid; */
+    }
+    .top-container .header-body .header-text #datail{
+        width: 228px;
+        height: 44px;
+        margin-top: 28px;
+        border: 3px rgb(255, 255, 255) solid;
+        /* border: 1px red solid; */
+        border-radius: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 50px;
+        font-size: 18px;
+        font-family: '思源';
+        background-color: rgb(163, 162, 162,0);
+        color:white;
+    }
+    .el-icon-d-arrow-right{
+      color: #fff;
+      font-weight: 500;
+    }
+    /* 第二栏图 */
+    .box{
+       width: 100%;
+       height:800px;
+       /* border:1px red solid; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .box .pic{
+        background-color: grey;
+        height: 660px;
+        max-width: 1440px;
+        width: 100%;
+    }
+    /* 第三栏图 */
+    .box1{
+       width: 100%;
+       height:800px;
+       /* border:1px red solid; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: grey;
+    }
+    .box1 .contain{
+        height: 660px;
+        max-width: 1440px;
+      width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .box1 .contain .child{
+        width:348px;
+        height: 600px;
+        background-color: white;
+    }
+    /* 第四栏 */
+    .box2{
+       width: 100%;
+       height:800px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .box2 .tu{
+        height: 660px;
+        max-width: 1440px;
+      width: 100%;
+        background-color: grey;
+    }
+    /* 页尾 */
+    .foot-fu{
+        width: 100%;
+        background-color: #272E33;
+        height: 304px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+    .foot-fu .foot{
+        height: 240px;
+        max-width: 1440px;
+      width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .foot-fu .foot .left-title{
+        font-family: '思源';
+        font-size: 30px;
+      font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
+    }
+    .foot-fu .foot .right{
+        width: 875px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    .foot-fu .foot .right .foot-text{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .foot-fu .foot .right .foot-text .row{
+        margin: 20px;
+        align-items: baseline;
+    }
+    .foot-fu .foot .right .foot-text .row .foot-title{
+        font-family: '思源';
+        font-size: 20px;
+      color: white;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    p{
+      color: #169BD5;
+      line-height: 36px;	
+    }
+    .foot-fu .foot .right  .foot-right{
+        /* border: 1px red solid; */
+        width: 327px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .foot-fu .foot .right  .foot-right .tel{
+        width: 195px;
+        /* height: 114px; */
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        /* border:1px green solid; */
+    }
+    .foot-fu .foot .right  .foot-right img{
+        width: 116px;
+        height: 118px;
+        display: block;
+      margin: 0  0  0 20px;
+    }
+    .foot-fu .foot .right  .btn-tel{
+        width: 114px;
+        height: 40px;
+        border: 2px white solid;
+        border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        font-family: '思源';
+        font-size: 16px;
+        color: white;
+      right: 0px;
+      background-color: rgba(95, 95, 95, 0);
+    }
+    .foot-fu .foot .right  .mob{
+        margin-top: 20px;
+        font-family: '思源';
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+    .Notes{
+        margin-top: 10px;
+        font-family: '思源';
+        font-size: 16px;
+        line-height: 30px;
+        color: white;
+    }
+    .foot-fu .buttom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: '思源';
+        font-size: 14px;
+      height: 64px;
+       background-color: #04497B;
+    }
+
+ }
+
+@media screen and (max-width: 980px) {  
+    .header img{ display: none}
+    .list{ 
+        position: fixed;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        width: 35px;
+        height: 35px;
+        z-index: 2;
+        padding: 10px 20px;
+        }
+    .list span{
+        display: block;
+        height: 10px;
+        width: 50px;
+        background: white;
+        margin: 3px 0;
+        z-index: 222;
+        }
+    .smart-list{
+        position: fixed;
+        width: 280px;
+        height: 280px;
+        z-index: 9999;
+        background-color: rgb(255, 255, 255,1);
+        }
+    .smart-list a{
+        text-decoration: none;
+        line-height: 46px;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        color:rgba(108,108,108,1.00);
+        }
+    .close{
+        position: absolute;
+        right: 20px;
+        top:10px;
+        font-size: 18px;
+        }
+      .yemei .top-container .header .nav-fu{
+        display: none;
+      }
+      .top-container{
+          height: 100%;
+          width: 100%;
+          position: relative;
+      }
+      .top-container .header-body{
+          /* max-width: 1440px; */
+          width: 100%;
+          height: 100%;
+          margin:0 auto 10px;
+          display: flex;
+          height: 520px;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);	
+      }
+      .top-container .header-body .header-text{
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          height: 304px;
+      }
+      .top-container .header-body .header-text .title{
+          font-family: '思源';
+          font-size: 48px;
+          color: white;
+          line-height: 57px;
+          text-align: center;
+      }
+      .top-container .header-body .header-text .text{
+          margin-top: 50px;
+          font-family: '思源';
+          font-size: 24px;
+          color: white;
+          line-height: 27px;
+          text-align: center;
+          /* white-space: normal;
+          word-wrap: break-word;
+          word-break: break-all;
+          overflow: hidden; */
+      }
+      .top-container .header-body .btn-fu{
+          display: flex;
+          width: 100%;
+          
+          justify-content: center;
+          align-items: center;
+          height: 99px;
+          /* border: 1px green solid; */
+      }
+      .top-container .header-body .header-text #datail{
+          width: 228px;
+          height: 44px;
+          margin-top: 28px;
+          border: 3px rgb(255, 255, 255) solid;
+          border-radius: 150px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 50px;
+          font-size: 18px;
+          font-family: '思源';
+          background-color: rgb(163, 162, 162,0);
+          color:white;
+      }
+      .el-icon-d-arrow-right{
+        color: #fff;
+        font-weight: 500;
+      }
+      /* 第三栏图 */
+    .box1{
+        width: 100%;
+        /* height:800px; */
+        padding: 200px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+        height: auto;
+        box-sizing: border-box;
+        border: 1px yellw solid;
+     }
+     .box1 .contain{
+         /* height: 660px; */
+         max-width: 1440px;
+         width: 100%;
+         padding: 80px 0;
+         /* border:1px red solid; */
+         box-sizing: border-box;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+     }
+     .box1 .contain .child{
+         max-width:348px;
+         height: 600px;
+         margin: 40px;
+         background-color: white;
+         /* border: 1px green solid; */
+     }
+
+      /* 页尾 */
+      .foot-fu{
+        width: 100%;
+        background-color: #272E33;
+        padding-top: 20px;
+        box-sizing: border-box;
+        height: auto;
+    }
+    .foot-fu .foot{
+        box-sizing: border-box;
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .foot-fu .foot .left{
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .foot-fu .foot .left-title{
+        font-family: '思源';
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
+    }
+    .foot-fu .foot .right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .foot-fu .foot .right .foot-text{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .foot-fu .foot .right .foot-text .row{
+        margin: 20px;
+        align-items: baseline;
+    }
+    .foot-fu .foot .right .foot-text .row .foot-title{
+        font-family: '思源';
+        font-size: 20px;
+        color: white;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    p{
+      color: #169BD5;
+      line-height: 36px;	
+    }
+    .foot-fu .foot .right  .foot-right{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+    }
+    
+    .foot-fu .foot .right  .foot-right .tel{
+        width: 195px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .foot-fu .foot .right  .foot-right img{
+        width: 116px;
+        height: 118px;
+        display: block;
+      margin: 0  0  0 20px;
+    }
+    .foot-fu .foot .right  .btn-tel{
+        width: 114px;
+        height: 40px;
+        border: 2px white solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: '思源';
+        font-size: 16px;
+        color: white;
+        right: 0px;
+        background-color: rgba(95, 95, 95, 0);
+    }
+    .foot-fu .foot .right  .mob{
+        margin-top: 20px;
+        font-family: '思源';
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+    .Notes{
+        margin-top: 10px;
+        font-family: '思源';
+        font-size: 16px;
+        line-height: 30px;
+        color: white;
+    }
+    .foot-fu .buttom{
+        display: none;
+    }
+    .foot-fu .buttom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 26px;
+        text-align: center;
+        color: white;
+        font-size: '思源';
+        font-size: 14px;
+        height: 90px;
+        /* padding: 10px ; */
+        box-sizing: border-box;
+        background-color: #04497B;
+    }
+ }
+
+
+
+ @media screen and (max-width: 640px) {  
+    .header img{ display: none}
+
+    .list{ 
+        position: fixed;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+        width: 35px;
+        height: 35px;
+        z-index: 2;
+        padding: 10px 20px;
+        }
+    .list span{
+        display: block;
+        height: 10px;
+        width: 50px;
+        background: white;
+        margin: 3px 0;
+        z-index: 222;
+        }
+    .smart-list{
+        position: fixed;
+        width: 280px;
+        height: 280px;
+        z-index: 9999;
+        background-color: rgb(255, 255, 255,1);
+        }
+    .smart-list a{
+        text-decoration: none;
+        line-height: 46px;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        color:rgba(108,108,108,1.00);
+        }
+    .close{
+        position: absolute;
+        right: 20px;
+        top:10px;
+        font-size: 18px;
+        }
+      .yemei .top-container .header .nav-fu{
+        display: none;
+      }
+      .top-container{
+          height: 100%;
+          width: 100%;
+          position: relative;
+      }
+      .top-container .header-body{
+          /* border: 1px red solid; */
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          margin:0 auto 10px;
+          display: flex;
+          height: 520px;
+          justify-content: center;
+          align-items: center;
+      }
+      .top-container .header-body .header-text{
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-direction: column;
+          height: 304px;
+          width: 100%;
+      }
+      .top-container .header-body .header-text .title{
+          font-family: '思源';
+          font-size: 48px;
+          color: white;
+          line-height: 57px;
+          text-align: center;
+      }
+      .top-container .header-body .header-text .text{
+          margin-top: 50px;
+          font-family: '思源';
+          font-size: 24px;
+          color: white;
+          line-height: 28px;
+          text-align: center;
+          width: 100%;
+          padding: 0 30px;
+          box-sizing: border-box;
+       }
+      .top-container .header-body .btn-fu{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          height: 99px;
+          /* border: 1px green solid; */
+       }  
+      .top-container .header-body .header-text #datail{
+          width: 228px;
+          height: 44px;
+          margin-top: 28px;
+          border: 3px rgb(255, 255, 255) solid;
+          border-radius: 150px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0 50px;
+          font-size: 18px;
+          font-family: '思源';
+          background-color: rgb(163, 162, 162,0);
+          color:white;
+      }
+      .el-icon-d-arrow-right{
+        color: #fff;
+        font-weight: 500;
+      }
+      /* 第三栏图 */
+    .box1{
+        width: 100%;
+        
+        padding: 200px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+        height: auto;
+        box-sizing: border-box;
+        border: 1px yellw solid;
+     }
+     .box1 .contain{
+         max-width: 640px;
+         width: 100%;
+         padding: 80px 0;
+         /* border:1px red solid; */
+         box-sizing: border-box;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         flex-wrap: wrap;
+     }
+     .box1 .contain .child{
+         max-width:348px;
+         height: 600px;
+         margin: 40px;
+         background-color: white;
+     }
+
+  /* 页尾 */
+     .foot-fu{
+        width: 100%;
+        background-color: #272E33;
+        padding-top: 20px;
+        box-sizing: border-box;
+        height: auto;
+    }
+    .foot-fu .foot{
+        box-sizing: border-box;
+        max-width: 1440px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+    .foot-fu .foot .left{
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .foot-fu .foot .left-title{
+        font-family: '思源';
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 15px;
+    }
+    .foot-fu .foot .right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        /* border: 1px red solid; */
+    }
+    .foot-fu .foot .right .foot-text{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .foot-fu .foot .right .foot-text .row{
+        margin: 20px;
+        align-items: baseline;
+    }
+    .foot-fu .foot .right .foot-text .row .foot-title{
+        font-family: '思源';
+        font-size: 20px;
+        color: white;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    p{
+      color: #169BD5;
+      line-height: 36px;	
+    }
+    .foot-fu .foot .right  .foot-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        /* border: 1px red solid; */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .foot-fu .foot .right  .foot-right .tel{
+        max-width: 195px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .foot-fu .foot .right  .foot-right img{
+        max-width: 116px;
+        width: 100%;
+        height: 118px;
+        display: block;
+      margin: 0  0  0 20px;
+    }
+    .foot-fu .foot .right  .btn-tel{
+        width: 114px;
+        height: 40px;
+        border: 2px white solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: '思源';
+        font-size: 16px;
+        color: white;
+        right: 0px;
+        background-color: rgba(95, 95, 95, 0);
+    }
+    .foot-fu .foot .right  .mob{
+        margin-top: 20px;
+        font-family: '思源';
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+    .Notes{
+        margin-top: 10px;
+        font-family: '思源';
+        font-size: 16px;
+        line-height: 30px;
+        color: white;
+    }
+    .foot-fu .buttom{
+        display: none;
+    }
+    .foot-fu .buttom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 26px;
+        text-align: center;
+        color: white;
+        font-size: '思源';
+        font-size: 14px;
+        height: 90px;
+        box-sizing: border-box;
+        background-color: #04497B;
+    } 
+ }
