@@ -10,7 +10,7 @@
       </div>
       <!-- 父组件给子组件传值 -->
       <child-frist :val2="val"></child-frist>
-      <child-second  @changeFu="changeParent"></child-second>
+      <child-second @changeFu="changeParent"></child-second>
 
       <!-- watch与computed区别 -->
       <div class="testWatch">
@@ -33,35 +33,54 @@
       </div>
     </div>
     <div class="right_content">
-      <!-- 事件修饰符 once-->
-      <button @click.once="doThing()">事件修饰符once</button>
-      <!-- 事件修饰符 stop-->
-      <div @click="stopUp()">
-        <button style="width:380px;" @click.stop="doThing()">事件修饰符stop</button>
-      </div>
-      <!-- 事件修饰符 prevent-->
-      <div @click="stopUp()">
-        <a href="http://www.baidu.com" @click.prevent="preventThing">百度链接</a>
-        <button style="width:380px;" @click.prevent="preventThing()">事件修饰符prevent</button>
-      </div>
-      <!-- 事件修饰符 capture-->
-      <div @click.capture="captureThing()">
+      <!-- 事件修饰 -->
+      <div>
+        <!-- 事件修饰符 once-->
+        <button @click.once="doThing()">事件修饰符once</button>
+        <!-- 事件修饰符 stop-->
         <div @click="stopUp()">
-          <button style="width:380px;" @click="doThing()">事件修饰符capture</button>
+          <button style="width:380px;" @click.stop="doThing()">事件修饰符stop</button>
         </div>
+        <!-- 事件修饰符 prevent-->
+        <div @click="stopUp()">
+          <a href="http://www.baidu.com" @click.prevent="preventThing">百度链接</a>
+          <button style="width:380px;" @click.prevent="preventThing()">事件修饰符prevent</button>
+        </div>
+        <!-- 事件修饰符 capture-->
+        <div @click.capture="captureThing()">
+          <div @click="stopUp()">
+            <button style="width:380px;" @click="doThing()">事件修饰符capture</button>
+          </div>
+        </div>
+        <!-- 事件修饰符可以串联 .stop.prevent-->
+        <a href="http://www.baidu.com" @click.stop.prevent="preventThing">百度链接</a>
       </div>
-      <!-- 事件修饰符可以串联 .stop.prevent-->
-      <a href="http://www.baidu.com" @click.stop.prevent="preventThing">百度链接</a>
+      <div style="margin-top:16px;">
+        <!-- 引入 ant design 之后进行封装成组件，在字典调用 -->
+        <input type="text" placeholder />
+      </div>
+      <select-input
+        v-model="searchCondition.auditStatus"
+        :data="$dict.auditStatus"
+        placeholder="请选择审核状态"
+      ></select-input>
+      <select-input
+        v-model="searchCondition.inboundType"
+        :data="$dict.inboundType"
+        placeholder="请选择审核状态"
+      ></select-input>
     </div>
   </div>
 </template>
 <script>
 import childFrist from "@/component/child-frist.vue";
 import childSecond from "@/component/child-second.vue";
+import selectInput from "@/component/select-input.vue";
 export default {
   components: {
     childFrist,
-    childSecond
+    childSecond,
+    selectInput
   },
   data() {
     return {
@@ -69,12 +88,16 @@ export default {
       val: "",
       userName: "父传子信息",
       msg: "",
+      searchCondition:{},
       // computed 计算属性
       firstName: "",
       lastName: "",
       nameValue: "",
       tip: ""
     };
+  },
+  mounted(){
+    console.log(this)
   },
   methods: {
     changeChild(value) {
