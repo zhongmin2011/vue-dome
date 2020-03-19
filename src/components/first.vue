@@ -69,6 +69,7 @@
         :data="$dict.inboundType"
         placeholder="请选择审核状态"
       ></select-input>
+      <button @click="open()">windows open</button>
     </div>
   </div>
 </template>
@@ -129,6 +130,9 @@ export default {
     },
     captureThing() {
       console.log("captureThing");
+    },
+    open(){
+      window.open('http://www.baidu.com')
     }
   },
   watch: {
