@@ -1,5 +1,13 @@
 <template>
+
+<div>
+  <div class="nav">
+    <button><router-link to="first">dome</router-link></button>
+    <button><router-link to="nextTick">nextTick</router-link></button>
+    <button><router-link to="vuex">vuex</router-link></button>   
+  </div>
   <div class="content">
+    
     <div class="left__content">
       <div style="margin-bottom:10px;">我是父组件</div>
       <input v-model="value" v-focus="value" @change="changeChild(value)" v-color="'red'" />
@@ -70,13 +78,21 @@
         placeholder="请选择审核状态"
       ></select-input>
       <button @click="open()">windows open</button>
+      <div v-for="(item, i) in $router.meta" :key="i">
+        <button>{{item}}</button>
+      </div>
+      <div>
+        本地存储：<input type="text" v-model="valueLocal" @change="localVlaue(valueLocal)">
+      </div>
     </div>
+  </div>
   </div>
 </template>
 <script>
 import childFrist from "@/component/child-frist.vue";
 import childSecond from "@/component/child-second.vue";
 import selectInput from "@/component/select-input.vue";
+  let vm
 export default {
   components: {
     childFrist,
@@ -87,6 +103,7 @@ export default {
     return {
       value: "",
       val: "",
+      valueLocal:'',
       userName: "父传子信息",
       msg: "",
       searchCondition:{},
@@ -94,12 +111,9 @@ export default {
       firstName: "",
       lastName: "",
       nameValue: "",
-      tip: ""
+      tip: "",
     };
-  },
-  mounted(){
-    console.log(this)
-  },
+  }, 
   methods: {
     changeChild(value) {
       this.val = value;
@@ -133,6 +147,10 @@ export default {
     },
     open(){
       window.open('http://www.baidu.com')
+    },
+    localVlaue(value){
+      console.log(value,'changeValue')
+      localStorage.setItem('valueLocal',value)
     }
   },
   watch: {
@@ -198,5 +216,13 @@ export default {
 }
 .right_content button {
   margin: 8px;
+}
+.nav{
+  padding: 20px;
+  box-sizing: border-box;
+}
+.nav button{
+  width: 100px;
+  height: 30px;
 }
 </style>

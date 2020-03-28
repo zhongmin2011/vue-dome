@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import first from '@/components/first'
 
 Vue.use(Router)
 
@@ -12,7 +11,18 @@ export default new Router({
     },
     {
       path: '/first',
+      name:'first',
       component: () => import(/* webpackChunkName: "about" */ './../components/first.vue'), 
+    },
+    {
+      path: '/nextTick',
+      name:'nextTick',
+      component: () => import(/* webpackChunkName: "about" */ './../components/nextTick.vue'), 
+    }, 
+    {
+      path: '/vuex',
+      name:'vuex',
+      component: () => import(/* webpackChunkName: "about" */ './../components/vuex.vue'), 
     },    
   ]
 })

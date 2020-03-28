@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import "@/assets/css/reset.css"  
+import store from './store'
 
 import "@/registerComponents" 
 import bindPrototype from '@/prototype.js'
@@ -25,6 +26,7 @@ Vue.prototype.bus = new Vue();
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
  })
