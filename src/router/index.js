@@ -5,9 +5,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      redirect: '/first'
+    { // 路由重定向 的两种写法
+      path: '/', 
+      redirect: '/first',// 重定向  也可以写成  redirect:{name:'first'}
+      
     },
     {
       path: '/first',
@@ -23,6 +24,12 @@ export default new Router({
       path: '/vuex',
       name:'vuex',
       component: () => import(/* webpackChunkName: "about" */ './../components/vuex.vue'), 
+    }, 
+    // 404，匹配所以找不到的页面路由
+    {
+      path: '*',
+      name:'notFound',
+      component: () => import(/* webpackChunkName: "about" */ './../components/notFound.vue'), 
     },    
   ]
 })
