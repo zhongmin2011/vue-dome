@@ -25,7 +25,12 @@ export default new Router({
       name:'vuex',
       component: () => import(/* webpackChunkName: "about" */ './../components/vuex.vue'), 
     }, 
-    // 404，匹配所以找不到的页面路由
+    {
+      path: '/attrs',
+      name:'attrs',
+      component: () => import(/* webpackChunkName: "about" */ './../components/attrs.vue'), 
+    }, 
+    // 404，匹配所以找不到的页面路由 
     {
       path: '*',
       name:'notFound',
