@@ -1,45 +1,50 @@
+
 <template>
-  <div class="childContent">
-    <div>我是 最里面 组件</div>
-    <div style="margin-top:10px;">value值：{{value}}</div>
+  <div class="child">
+    <div>我是 attrsChild 页面</div>
+    <div class="ly">
+      <button @click="getValue">获取attrs页面的值</button>
+      <div style="margin-left:20px;">attrs：{{attrsValue}}</div>
+    </div>
   </div>
 </template>
-
+ 
 <script>
 export default {
-  name: "child",
+  name: "attrsChild",
   data() {
     return {
-        //value:''
+        attrsValue:[]
     };
   },
-  props: {
-      value: {
-          type: String
-      }
-  },
-//   computed: {
-//     getVal() {
-//       return this.parent.value;
-//     }
-//   },
-  // watch: {
-  //     getVal(newVal) {
-  //         console.log(newVal)
-  //     }
-  // },
-  methods: {}
+  methods: {
+    getValue() {
+        console.log(this,'123')
+        this.attrsValue = this.$attrs.attrsValue;
+    }
+  }
 };
 </script>
-<style  scoped>
-.childContent {
+<style scoped>
+.child {
+  padding: 20px;
+  width: 380px;
+  height: 150px;
+  margin: 30px;
+  background-color: #be6f6f;
+}
+.ly {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top:20px;
   align-items: center;
-  margin-top: 20px;
-  background: #cc8585;
-  width: 350px;
-  height: 250px;
+}
+
+button{
+    width: 140px;
+    height: 28px;
+    border:0;
+    border-radius: 4px;
+    color: rgb(56, 56, 56);
+    background-color: rgb(216, 216, 216);
 }
 </style>

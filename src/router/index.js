@@ -30,6 +30,11 @@ export default new Router({
       name:'attrs',
       component: () => import(/* webpackChunkName: "about" */ './../components/attrs.vue'), 
     }, 
+    {
+      path: '/props',
+      name:'props',
+      component: () => import(/* webpackChunkName: "about" */ './../components/props.vue'), 
+    }, 
     // 404，匹配所以找不到的页面路由 
     {
       path: '*',

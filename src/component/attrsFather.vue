@@ -1,41 +1,54 @@
+
 <template>
-  <div class="childContent">
-    <!-- <div>我是 中间 组件</div>
-    value值：{{value}}---{{value}}
-    <attrsChild :value="value"></attrsChild>-->
-    <div>我是 中间 组件</div>
-    <div style="margin-top:10px;"> value值：{{value}}</div>     
-    <attrsChild :value="value"></attrsChild>
+  <div class="hello">
+    <div>我是 attrsFather 页面</div>
+     <div class="ly">
+      <button @click="getValue">获取attrs页面的值</button>
+      <div style="margin-left:20px;">attrs：{{attrsValue}}</div>
+    </div>
+    <attrsChild :attrsValue="attrsValue"></attrsChild>
   </div>
 </template>
-
+ 
 <script>
 import attrsChild from "@/component/attrsChild.vue";
 
 export default {
-  name: "child",
-  props: {
-    value: {
-      type: String
-    }
-  },
+  name: "attrsFather",
   components: {
     attrsChild
   },
   data() {
-    return {}
+    return {
+      attrsValue: []
+    };
+  },
+  methods: {
+    getValue() {
+      this.attrsValue = this.$attrs.modelType;
+    }
   }
 };
 </script>
-<style  scoped>
-.childContent {
+<style scoped>
+.hello {
+  padding: 20px;
+  width: 500px;
+  height: 300px;
+  margin: 40px;
+  background-color: #d4d4d4;
+}
+button{
+    width: 140px;
+    height: 28px;
+    border:0;
+    border-radius: 4px;
+    color: rgb(56, 56, 56);
+    background-color: rgb(240, 240, 240);
+}
+.ly {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top:20px;
   align-items: center;
-  margin-top: 20px;
-  background: #ceb8b8;
-  width: 600px;
-  height: 450px;
 }
 </style>

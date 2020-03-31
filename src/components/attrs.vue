@@ -1,11 +1,11 @@
 
 <template>
-  <div class="hello">
+  <div class="hello" :modelType="modelType">
     <div class="mg-b20">我是 attrs 页面</div>
-    <input type="text" v-model="value" />
-    {{value}}---最外面组件
-    <attrsFather :value="value"></attrsFather>
+    <input type="text" v-model="value" @change="pull(value)"/>
+    <attrsFather :modelType="modelType"></attrsFather>
   </div>
+ 
 </template>
  
 <script>
@@ -18,8 +18,14 @@ export default {
   },
   data() {
     return {
-        value:''
+        value:'',
+        modelType:[]
     };
+  },
+  methods:{
+    pull(value){
+      this.modelType.push(value)
+    }
   }
 };
 </script>

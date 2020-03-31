@@ -5,8 +5,8 @@
     <button><router-link to="first">dome</router-link></button>
     <button><router-link to="nextTick">nextTick</router-link></button>
     <button><router-link to="vuex">vuex</router-link></button>   
+    <button><router-link to="props">父子三代传值</router-link></button>
     <button><router-link to="attrs">attrs</router-link></button>
-
   </div>
   <div class="content">
     
