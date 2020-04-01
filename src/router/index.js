@@ -35,6 +35,41 @@ export default new Router({
       name:'props',
       component: () => import(/* webpackChunkName: "about" */ './../components/props.vue'), 
     }, 
+    {
+      path: '/anti-shake',
+      name:'anti-shake',
+      component: () => import(/* webpackChunkName: "about" */ './../components/anti-shake.vue'), 
+    }, 
+    {
+      path: '/dict',
+      name:'dict',
+      component: () => import(/* webpackChunkName: "about" */ './../components/dict.vue'), 
+    }, // 
+    {
+      path: '/table',
+      name:'table',
+      component: () => import(/* webpackChunkName: "about" */ './../components/table.vue'), 
+    }, 
+    {
+      path: '/local',
+      name:'local',
+      component: () => import(/* webpackChunkName: "about" */ './../components/local.vue'), 
+    }, 
+    {
+      path: '/directives',
+      name:'directives',
+      component: () => import(/* webpackChunkName: "about" */ './../components/directives.vue'), 
+    }, 
+    {
+      path: '/watch',
+      name:'watch',
+      component: () => import(/* webpackChunkName: "about" */ './../components/watch.vue'), 
+    }, 
+    {
+      path: '/modifier',
+      name:'modifier',
+      component: () => import(/* webpackChunkName: "about" */ './../components/modifier.vue'), 
+    }, 
     // 404，匹配所以找不到的页面路由 
     {
       path: '*',
