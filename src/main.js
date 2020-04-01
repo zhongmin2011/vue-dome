@@ -5,15 +5,15 @@ import App from './App'
 import router from './router'
 import "@/assets/css/reset.css"  
 import store from './store'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-
 import "@/registerComponents" 
 import bindPrototype from '@/prototype.js'
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
 
+
+Vue.use(ViewUI);
 bindPrototype(Vue)
 Vue.config.productionTip = false
-Vue.use(ElementUI);
 
 Vue.filter('allFilter',function(msg,value1,value2){
   return msg.replace(/单纯/g, value1+value2 )
