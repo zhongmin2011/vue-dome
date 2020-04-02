@@ -1,50 +1,94 @@
 <template>
   <div class="shake">
-    <div>我是防抖与节流页面,这个 我还没有写好文档哈</div>
+    <div>我是防抖与节流页面</div>
     <div class="scroll"></div>
-    <button class="btn" @click="scroll">回到顶部</button>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      value: "",
-      timeNow: "",
-      inputValue: "",
-      scrollTop: ""
+      scrollTopValue: ""
     };
-  },
-  created() {
-    
   },
   mounted() {
-     this.scrollTop =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    window.onscroll = () => {
-      return (() => {
-        console.log(this.scrollTop);
-        // this.scrollTop = document.body.clientWidth > 1400 ? (document.body.clientWidth - 1400) / 2 : 0;
-      })();
-    };
-  },
-  watch: {
-    scrollTop(val, oldVal) {
-    }
+    window.onscroll = ("scroll", this.debounce(this.scrollTop, 200,true)); //节流
+    // window.onscroll = ("scroll", this.throttle(this.scrollTop, 2000)); //节流
   },
   methods: {
-    scroll(value) {
-      this.scrollTop =
-      document.body.scrollTop || document.documentElement.scrollTop;
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    debounce(func,wait,immediate) {
+        let timeout;
+
+        return function () {
+            let context = this;
+            let args = arguments;
+
+            if (timeout) clearTimeout(timeout);
+            if (immediate) {
+              // debugger
+                var callNow = !timeout;// fasle
+                timeout = setTimeout(() => {
+                    timeout = null;
+                }, wait)
+                if (callNow) func.apply(context, args)
+            } else {
+              debugger
+                timeout = setTimeout(function(){
+                    func.apply(context, args)
+                }, wait);
+            }
+        }
     },
-    getTime() {
-      // console.log("我获取了当前时间");
-      this.timeNow = new Date();
-      return this.timeNow;
+
+
+
+    // debounce(fn, interval) { // 防抖
+    //   let timeout;
+    //   return function() {
+    //     let ctx = this;
+    //     let args = arguments;
+
+    //     if (timeout) clearTimeout(timeout);
+    //     timeout = setTimeout(() => {
+    //       fn.apply(ctx, args);
+    //     }, interval);
+    //   };
+    // },
+
+ 
+    // throttle(fn, interval) {
+    //   // 定时器
+    //   let timeOut;
+    //   return function() {
+    //     let ctx = this;
+    //     let args = arguments;
+
+    //     if (!timeOut) {
+    //       timeOut = setTimeout(() => {
+    //         timeOut = null;
+    //         fn.apply(ctx, args);
+    //       }, interval);
+    //     }
+    //   };
+    // },
+
+    // throttle(fn, interval) {// 时间轴
+    //   let last;
+    //   return function() {
+    //     let ctx = this;
+    //     let args = arguments;
+
+    //     let now = +new Date();
+    //     if (now - last > interval) {
+    //       last = now;
+    //       fn.apply(ctx, args);
+    //     }
+    //   };
+    // },
+    scrollTop() {
+      this.scrollTopValue =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      console.log("我是scroll事件" + this.scrollTopValue);
     }
   }
 };
