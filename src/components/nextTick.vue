@@ -1,38 +1,44 @@
 
 <template>
   <div class="hello">
-    <div>
-      <button id="firstBtn" @click="testClick()" ref="aa">{{testMsg}}</button>
-    </div>
     <div style="margin-top:20px;">
-      本地存储：<span>{{localValue}}</span>
+      本地存储：
+      <span>{{localValue}}</span>
+    </div>
+    <div>
+      <div>$nextTick学习</div>
+      <button v-if="showState" @click="changeState()">点击展示input框</button>
+      <input type="text" ref="inputShow" v-else />
     </div>
   </div>
 </template>
  
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "nextTick",
+  data() {
     return {
-      testMsg:"原始值",
-      localValue: localStorage.getItem('valueLocal')
-    }
+      showState: true,
+      localValue: localStorage.getItem("valueLocal")
+    };
   },
-  methods:{
-    testClick:function(){
-      let that=this;
-      that.testMsg="修改后的值";
-      
-      that.$nextTick(function(){
-        console.log(that.$refs.aa.innerText);  //输出：修改后的值
+  methods: {
+    changeState() {
+      this.showState = false;
+      this.$nextTick(function() {
+        this.$refs.inputShow.focus();
       });
     }
-}}
+  }
+};
 </script>
 <style scoped>
-.hello{
-    background-color:orange;
-    padding: 20px;
+.hello {
+  background-color: rgb(247, 229, 197);
+  padding: 20px;
+}
+button{
+  margin-top: 5px;
+  padding: 5px 16px;
 }
 </style>

@@ -37,6 +37,9 @@
       <button>
         <router-link to="local">本地存储</router-link>
       </button>
+      <button>
+        <router-link to="scrollTop">页面缓慢滚动到顶部</router-link>
+      </button>
     </div>
     <div class="content">
       <div class="left__content">
@@ -50,17 +53,9 @@
         <!-- 父组件给子组件传值 -->
         <child-frist :val2="val"></child-frist>
         <child-second @changeFu="changeParent"></child-second>
-
-        <!-- watch与computed区别 -->
-      </div>
-      <div class="right_content">
-        <div style="margin-top:16px;">
-          <!-- 引入 ant design 之后进行封装成组件，在字典调用 -->
-          <input type="text" placeholder />
-        </div>
-        <button @click="open()">windows open</button>
-        <div v-for="(item, i) in $router.meta" :key="i">
-          <button>{{item}}</button>
+        <div class="ly mg-t20">
+          <div>测试window属性:</div>
+          <button @click="open()">windows open</button>
         </div>
       </div>
     </div>
@@ -91,7 +86,10 @@ export default {
       //  出错  子组件向父组件传事件
       console.log(value, "value");
       this.msg = value;
-    }
+    },
+    open() {
+      window.open("http://www.baidu.com");
+    } 
   }
 };
 </script>
@@ -109,9 +107,14 @@ export default {
   background: #e7e7e7;
   padding: 10px;
   /* height: 500px; */
-  width: 450px;
+  width: 600px;
 }
-
+.ly{
+  display: flex;
+}
+.mg-t20{
+  margin-top: 20px;
+}
 .right_content {
   width: 400px;
   display: flex;

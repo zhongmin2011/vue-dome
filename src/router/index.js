@@ -70,6 +70,11 @@ export default new Router({
       name:'modifier',
       component: () => import(/* webpackChunkName: "about" */ './../components/modifier.vue'), 
     }, 
+    {
+      path: '/scrollTop',
+      name:'scrollTop',
+      component: () => import(/* webpackChunkName: "about" */ './../components/scrollTop.vue'), 
+    },
     // 404，匹配所以找不到的页面路由 
     {
       path: '*',

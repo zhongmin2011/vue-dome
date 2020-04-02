@@ -41,10 +41,7 @@ export default {
     },
     captureThing() {
       console.log("captureThing");
-    },
-    open() {
-      window.open("http://www.baidu.com");
-    }    
+    }   
   }
 };
 </script>

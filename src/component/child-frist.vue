@@ -4,7 +4,7 @@
     <!-- 子组件接受父组件的传值 -->
     <div style="margin:15px;">接父组件传值：{{val2}}</div>
     <input type="text" v-model="value" @change="setValue(value)">
-    <button @click="changeValue('子传父传值')" style="margin-top:10px;">传值给兄弟组件</button>
+    <button  style="margin-top:10px;">传值给兄弟组件</button>
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
     };
   },
   mounted(){
-    console.log(this.val2,"dir")
   },
   methods:{
       setValue(value){
