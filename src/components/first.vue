@@ -40,6 +40,9 @@
       <button>
         <router-link to="scrollTop">页面缓慢滚动到顶部</router-link>
       </button>
+      <button>
+        <router-link to="vue-todo">vue-todo</router-link>
+      </button>
     </div>
     <div class="content">
       <div class="left__content">

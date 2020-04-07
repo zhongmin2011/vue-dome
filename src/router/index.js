@@ -75,6 +75,11 @@ export default new Router({
       name:'scrollTop',
       component: () => import(/* webpackChunkName: "about" */ './../components/scrollTop.vue'), 
     },
+    {
+      path: '/vue-todo',
+      name:'vue-todo',
+      component: () => import(/* webpackChunkName: "about" */ './../components/vue-todo.vue'), 
+    },
     // 404，匹配所以找不到的页面路由 
     {
       path: '*',
