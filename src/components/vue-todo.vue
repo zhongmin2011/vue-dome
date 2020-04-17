@@ -55,20 +55,20 @@
 export default {
   data() {
     return {
-      todoList: [
-        { title: "起床", complete: false, show: false },
-        { title: "吃饭", complete: true, show: false },
-        { title: "叠被", complete: false, show: false },
-        { title: "午饭", complete: true, show: false },
-        { title: "午睡", complete: false, show: false },
-        { title: "学习", complete: true, show: false }
-      ],
+      // 获取本地 存储值时，要把字符串转为对象格式
+      todoList: JSON.parse(window.localStorage.getItem('todo_key') || '[]'),
       value: "",
       isButtonShow: false,
       bgcolor: "white",
       currIndex: null,
       checkValue:false
     };
+  },
+  watch:{
+    todoList(value){
+      // 存储本地时，要以字符串格式进行存储
+        window.localStorage.setItem('todo_key',JSON.stringify(value))
+    }
   },
   methods: {
     addItem(value) {
@@ -82,7 +82,6 @@ export default {
       this.value = "";
     },
     deleteItem(index) {
-      console.log(this.todoList);
       this.todoList.splice(index, 1);
     },
     buttonShow(index) {

@@ -80,7 +80,17 @@ export default new Router({
       name:'vue-todo',
       component: () => import(/* webpackChunkName: "about" */ './../components/vue-todo.vue'), 
     },
-    // 404，匹配所以找不到的页面路由 
+    {
+      path: '/new-set',
+      name:'new-set',
+      component: () => import(/* webpackChunkName: "about" */ './../components/new-set.vue'), 
+    },
+    {
+      path: '/two-screen',
+      name:'two-screen',
+      component: () => import(/* webpackChunkName: "about" */ './../components/two-screen.vue'), 
+    },
+    // 404，匹配所以找不到的页面路由  two-screen
     {
       path: '*',
       name:'notFound',

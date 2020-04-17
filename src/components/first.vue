@@ -43,6 +43,12 @@
       <button>
         <router-link to="vue-todo">vue-todo</router-link>
       </button>
+      <button>
+        <router-link to="new-set">new Set</router-link>
+      </button>
+      <button>
+        <router-link to="two-screen">双层筛选</router-link>
+      </button>
     </div>
     <div class="content">
       <div class="left__content">
