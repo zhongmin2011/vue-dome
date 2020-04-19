@@ -90,7 +90,12 @@ export default new Router({
       name:'two-screen',
       component: () => import(/* webpackChunkName: "about" */ './../components/two-screen.vue'), 
     },
-    // 404，匹配所以找不到的页面路由  two-screen
+    {
+      path: '/colorRed',
+      name:'colorRed',
+      component: () => import(/* webpackChunkName: "about" */ './../components/colorRed.vue'), 
+    },
+    // 404，匹配所以找不到的页面路由
     {
       path: '*',
       name:'notFound',
