@@ -6,8 +6,8 @@
         <div class="red-it" v-for="(it,i) in item" :key="i">{{it}}</div>
       </div>
     </div>
-    <button @click="show">展示</button>
-    <div style="color:green;margin-top:10px;">这个是根据list中requestId来排序，其中按照变更前-变更后来排序，把变更前后的不同字段进行标红</div>
+    <button @click="requestIdSort">展示</button>
+    <div style="color:green;margin-top:10px;">这个是根据list中requestId来排序，其中按照改变前-改变后来排序，把变更前后的不同字段进行标红</div>
     <div class="showContent">
       <div>给不同的值进行标红</div>
       <!-- <div class="red-row" v-for="(item,index) of lineList" :key="index">
@@ -38,49 +38,37 @@ export default {
       list: [
         {
           accessWay: "SDH",
-          areaA: "南京",
-          areaZ: "上海",
-          index: 0,
-          otherDesc: "其他说明前",
-          particularGuaranteeDesc: "特殊保障说明",
-          portA: "南京",
-          rcdFlag: "变更前",
+          area: "江苏省",
+          city: "苏州市",
+          desc: "描述",
+          change: "改变前",
           remark: "Remark",
           requestId: "1"
         },
         {
           accessWay: "SDH",
-          areaA: "南京",
-          areaZ: "上海",
-          index: 0,
-          otherDesc: "其他说明后",
-          particularGuaranteeDesc: "特殊保障说明",
-          portA: "南京",
-          rcdFlag: "变更后",
+          area: "江苏省",
+          city: "苏州市",
+          desc: "描述后",
+          change: "改变后",
           remark: "Remark",
           requestId: "2"
         },
         {
           accessWay: "SDH",
-          areaA: "南京",
-          areaZ: "上海",
-          index: 0,
-          otherDesc: "其他说明前",
-          particularGuaranteeDesc: "特殊保障说明",
-          portA: "南京",
-          rcdFlag: "变更前",
+          area: "江苏省",
+          city: "苏州市",
+          desc: "描述",
+          change: "改变前",
           remark: "Remark",
           requestId: "2"
         },
         {
           accessWay: "SDH",
-          areaA: "南京",
-          areaZ: "上海",
-          index: 0,
-          otherDesc: "其他说明后",
-          particularGuaranteeDesc: "特殊保障说明",
-          portA: "南京",
-          rcdFlag: "变更后",
+          area: "江苏省",
+          city: "苏州市",
+          desc: "描述后",
+          change: "改变后",
           remark: "Remark",
           requestId: "1"
         }
@@ -89,13 +77,13 @@ export default {
   },
   methods: {
     // 第一步进行排序
-    show() {
+    requestIdSort() {
       this.set.forEach(val => {
         this.list.find((item, index) => {
-          if (item.requestId === val && item.rcdFlag === "变更前") {
+          if (item.requestId === val && item.change === "改变前") {
             this.lineList.push(item);
           }
-          if (item.requestId === val && item.rcdFlag === "变更后") {
+          if (item.requestId === val && item.change === "改变后") {
             this.lineList.push(item);
           }
         });
@@ -103,7 +91,7 @@ export default {
     },
     compare(value, index) {
       if (index % 2 == 1) {
-        // 索引值为奇数时，其实为偶数数组即变更后
+        // 索引值为奇数时，其实为偶数数组即改变后
         let preItem = this.lineList[index--]
         let afterItem = this.lineList[index]
         if(preItem[value] !== afterItem[value]){
