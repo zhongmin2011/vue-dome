@@ -95,6 +95,11 @@ export default new Router({
       name:'colorRed',
       component: () => import(/* webpackChunkName: "about" */ './../components/colorRed.vue'), 
     },
+    {
+      path: '/downloadFile',
+      name:'downloadFile',
+      component: () => import(/* webpackChunkName: "about" */ './../components/downloadFile.vue'), 
+    },
     // 404，匹配所以找不到的页面路由
     {
       path: '*',

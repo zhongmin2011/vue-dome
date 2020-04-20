@@ -52,6 +52,9 @@
       <button>
         <router-link to="colorRed">筛选不同字段标红</router-link>
       </button>
+      <button>
+        <router-link to="downloadFile">下载</router-link>
+      </button>
     </div>
     <div class="content">
       <div class="left__content">

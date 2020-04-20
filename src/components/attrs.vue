@@ -1,6 +1,6 @@
 
 <template>
-  <div class="hello" :modelType="modelType">
+  <div class="hello">
     <div class="mg-b20">我是 attrs 页面</div>
     <input type="text" v-model="value" @change="pull(value)"/>
     <attrsFather :modelType="modelType"></attrsFather>
