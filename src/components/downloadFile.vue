@@ -1,18 +1,25 @@
 <template>
   <div class="downloadFile">
       <div>我是下载页面</div>
+      <div :class="[isActive ? 'activeClass':'']">我是绑定的值</div>
       <button @click="downloadFile">下载</button>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      isActive:true,
+      obj:{name:'xiaoxiao'}
+    };
   },
   methods:{
-    downloadFile (type) {
-        window.open('/api/group/attachment/download?id=' + id)
+    downloadFile () {
+      console.log(this, 'wai')
+      return ()=>{        
+      console.log(this, 'nei')
       }
+    }
   }
 };
 </script>
@@ -23,5 +30,8 @@ export default {
 button{
   margin-top: 10px;
   padding: 2px 10px;
+}
+.activeClass{
+  color: red;
 }
 </style>
