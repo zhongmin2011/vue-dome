@@ -100,13 +100,17 @@ export default new Router({
       name:'downloadFile',
       component: () => import(/* webpackChunkName: "about" */ './../components/downloadFile.vue'), 
     },
-    
+    {
+      path: '/vModel',
+      name:'vModel',
+      component: () => import(/* webpackChunkName: "about" */ './../components/vModel.vue'), 
+    },
     {
       path: '/getRessoure',
       name:'getRessoure',
       component: () => import(/* webpackChunkName: "about" */ './../components/getRessoure.vue'), 
     },
-    // 404，匹配所以找不到的页面路由 
+    // 404，匹配所以找不到的页面路由  
     {
       path: '*',
       name:'notFound',

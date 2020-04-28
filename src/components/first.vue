@@ -58,6 +58,9 @@
       <button>
         <router-link to="getRessoure">请求</router-link>
       </button>
+      <button>
+        <router-link to="vModel">v-model</router-link>
+      </button>
     </div>
     <div class="content">
       <div class="left__content">
