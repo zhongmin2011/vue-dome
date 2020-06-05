@@ -67,10 +67,10 @@
           <div class="model__content--input">
             <div>v-model绑定select，只能绑定一个值</div>
             <select name="你喜欢的水果有" id="" v-model="value">
-              <option value="西瓜">西瓜</option>
-              <option value="柚子">柚子</option>
-              <option value="荔枝">荔枝</option>
-              <option value="芒果">芒果</option>
+              <option value="0">西瓜</option>
+              <option value="1">柚子</option>
+              <option value="2">荔枝</option>
+              <option value="3">芒果</option>
             </select>
             <div>喜欢的水果：{{value}}</div>
           </div>

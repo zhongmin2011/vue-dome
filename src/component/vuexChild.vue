@@ -3,6 +3,7 @@
     <div>我的vuex子组件</div>    
     <button @click="increaseChild">增加</button>
     <button @click="reduceChild">减少</button>
+    <button @click="changeAdd">修改</button>
   </div>
 </template>
 
@@ -19,8 +20,11 @@ export default {
   mounted(){
   },
   methods:{
+    changeAdd(){
+      this.$store.dispatch('increase',6)
+    },
      increaseChild(){
-         this.$store.commit('increase',2)
+        this.$store.commit('increase',2)
      },
      reduceChild(){
         this.$store.commit('reduce',2) 

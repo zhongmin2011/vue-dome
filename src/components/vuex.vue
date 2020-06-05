@@ -34,9 +34,8 @@ export default {
 .hello{
     padding: 20px;
     width: 500px;
-    height: 200px;
+    height: 250px;
     border:1px grey solid
-    /* background-color:#d4d4d4; */
 }
 .mg-t20{
     margin-top: 20px;
