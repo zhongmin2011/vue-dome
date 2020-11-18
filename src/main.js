@@ -11,10 +11,12 @@ import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 
 
+// Vue.use(axios)
 Vue.use(ViewUI);
 bindPrototype(Vue)
 Vue.config.productionTip = false
 
+// Vue.prototype.$axios = axios
 Vue.filter('allFilter',function(msg,value1,value2){
   return msg.replace(/单纯/g, value1+value2 )
 })

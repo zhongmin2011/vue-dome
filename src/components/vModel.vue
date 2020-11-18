@@ -66,7 +66,7 @@
         <div class="model__content">
           <div class="model__content--input">
             <div>v-model绑定select，只能绑定一个值</div>
-            <select name="你喜欢的水果有" id="" v-model="value">
+            <select name="你喜欢的水果有" id v-model="value">
               <option value="0">西瓜</option>
               <option value="1">柚子</option>
               <option value="2">荔枝</option>
@@ -75,6 +75,7 @@
             <div>喜欢的水果：{{value}}</div>
           </div>
         </div>
+        <button @click="consloe()">5678</button>
       </div>
     </div>
   </div>
@@ -83,7 +84,7 @@
 export default {
   data() {
     return {
-      value: "",
+      value: "2",
       fruit: [],
       sex: "",
       inputValue: "",
@@ -94,8 +95,14 @@ export default {
   },
   methods: {
     input(valueNumber) {
-      console.log(valueNumber);
-      console.log(typeof valueNumber);
+      // console.log(valueNumber);
+      // console.log(typeof valueNumber);
+    },
+    consloe(){
+      console.log(this.dome(),'67890-')
+    },
+    dome() {
+      console.log("hello world");
     }
   }
 };

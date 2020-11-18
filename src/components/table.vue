@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import { tableList } from "@/config/data";
+// import { tableList } from "@/config/data";
 export default {
   data() {
     return {

@@ -109,6 +109,69 @@ export default new Router({
       path: '/getRessoure',
       name:'getRessoure',
       component: () => import(/* webpackChunkName: "about" */ './../components/getRessoure.vue'), 
+    },    
+    {
+      path: '/iteration',
+      name:'iteration',
+      component: () => import(/* webpackChunkName: "about" */ './../components/iteration.vue'), 
+    },    
+    {
+      path: '/copy',
+      name:'copy',
+      component: () => import(/* webpackChunkName: "about" */ './../components/copy.vue'),
+    },    
+    {
+      path: '/listTodo',
+      name:'listTodo',
+      component: () => import(/* webpackChunkName: "about" */ './../components/listTodo.vue'), 
+    },    
+    {
+      path: '/promise',
+      name:'promise',
+      component: () => import(/* webpackChunkName: "about" */ './../components/promise.vue'), 
+    },
+    { // 各种基础组件的书写
+      path: '/basic',
+      name:'basic',
+      component: () => import(/* webpackChunkName: "about" */ './../components/base-page.vue'), 
+    },
+    {
+      path: '/route',
+      name:'route',
+      component: () => import(/* webpackChunkName: "about" */ './../components/route.vue'), 
+      children:[
+        {
+          path: '/route/routeOne/:name',
+          name:'routeOne',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeOne.vue')
+        },
+        // 做路由嵌套
+        {
+          path: '/route/routeTwo',
+          name:'routeTwo',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeTwo.vue')
+        },
+        {
+          path: '/route/routeThree',
+          name:'routeThree',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeThree.vue')
+        },
+        {
+          path: '/route/routeFor',
+          name:'routeFor',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeFor.vue')
+        },
+        {
+          path: '/route/routeFive',
+          name:'routeFive',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeFive.vue')
+        },
+        {
+          path: '/route/routeSix/:id',
+          name:'routeSix',
+          component: () => import(/* webpackChunkName: "about" */ './../components/routeSix.vue')
+        },
+      ]
     },
     // 404，匹配所以找不到的页面路由  
     {
