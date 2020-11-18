@@ -4,11 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import "@/assets/css/reset.css"  
-import store from './store'
+import store from './store/index'
 import "@/registerComponents" 
 import bindPrototype from '@/prototype.js'
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
+
 
 
 // Vue.use(axios)

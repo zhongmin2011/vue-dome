@@ -1,14 +1,16 @@
 <template>
   <div class="childContent">
     <div>我的vuex子组件</div>    
-    <button @click="increaseChild">增加</button>
+    <!-- <button @click="increaseChild">增加</button>
     <button @click="reduceChild">减少</button>
-    <button @click="changeAdd">修改</button>
+    <button @click="changeAdd">修改</button> -->
+    <div>此时，我已经获取到全局的vueData值</div>
+    <div>{{vueData}}</div>
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "vuexChild",
@@ -18,6 +20,9 @@ export default {
     };
   },
   mounted(){
+  },
+  computed: {
+    ...mapGetters(["vueData"]),
   },
   methods:{
     changeAdd(){

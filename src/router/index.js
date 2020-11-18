@@ -26,6 +26,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './../components/vuex.vue'), 
     }, 
     {
+      path: '/vuexChild',
+      name:'vuexChild',
+      component: () => import(/* webpackChunkName: "about" */ './../component/vuexChild.vue'), 
+    }, 
+    {
       path: '/attrs',
       name:'attrs',
       component: () => import(/* webpackChunkName: "about" */ './../components/attrs.vue'), 
