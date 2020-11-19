@@ -140,6 +140,16 @@ export default new Router({
       name:'basic',
       component: () => import(/* webpackChunkName: "about" */ './../components/base-page.vue'), 
     },
+    { // 跨域组件的书写
+      path: '/crossDomain',
+      name:'crossDomain',
+      component: () => import(/* webpackChunkName: "about" */ './../components/crossDomain.vue'), 
+    },,
+    { // 跨域组件的书写
+      path: '/axios',
+      name:'axios',
+      component: () => import(/* webpackChunkName: "about" */ './../components/axios.vue'), 
+    },
     {
       path: '/route',
       name:'route',

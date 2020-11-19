@@ -75,6 +75,12 @@
     <button>
       <router-link to="promise">promise</router-link>
     </button>
+    <button>
+      <router-link to="crossDomain">跨域</router-link>
+    </button>
+    <button>
+      <router-link to="axios">接口管理</router-link>
+    </button>
   </div>
 </template>
 <script>
