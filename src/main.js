@@ -9,9 +9,10 @@ import "@/registerComponents"
 import bindPrototype from '@/prototype.js'
 import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
+import api from './network/api' 
 
-
-
+// 将api挂载到vue的原型上
+Vue.prototype.$api = api;
 // Vue.use(axios)
 Vue.use(ViewUI);
 bindPrototype(Vue)

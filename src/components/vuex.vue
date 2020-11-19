@@ -54,6 +54,10 @@
         <div class="blue ml20 ml20">2，该页面中，可以修改vuex中vueData值，并且修改完可以在子组件中全局查看</div>
         </div>
       </div>
+      <div style="color:red;margin-left:20px">
+        <div>注：vuex中，不可以改变布尔值，及时改了，数据也不会更新</div>
+        <div>解决方法：可以给window加一个属性，用window属性进行控制</div>
+      </div>
   </div>
 </template>
  
@@ -107,7 +111,7 @@ export default {
 <style scoped>
 .hello {
   padding: 20px;
-  width: 1200px;
+  width: 1600px;
   display: flex;
   justify-content: space-between;
 }

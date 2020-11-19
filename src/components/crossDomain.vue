@@ -44,6 +44,7 @@
       <div class="blue">&nbsp;&nbsp;&nbsp;}</div>
       <div class="blue">注：如果是多个跨域接口，那么要配置多个跨域的配置</div>
       <div class="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;配置好后一定要关闭原来的server，重新npm run dev启动项目。不然无效。</div>
+      <div class="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详情请看vue.config.js文件</div>
     </div>
   </div>
 </template>
