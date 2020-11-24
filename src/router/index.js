@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+// import PUBLIC from './modules/public'
+// import USER from './modules/user'
 Vue.use(Router)
+
 
 export default new Router({
   routes: [
@@ -18,7 +20,8 @@ export default new Router({
     {
       path: '/nextTick',
       name:'nextTick',
-      component: () => import(/* webpackChunkName: "about" */ './../components/nextTick.vue'), 
+      component: resolve => require(['./../components/nextTick.vue'], resolve )
+      // component: () => import(/* webpackChunkName: "about" */ './../components/nextTick.vue'), 
     }, 
     {
       path: '/vuex',
@@ -129,11 +132,16 @@ export default new Router({
       path: '/listTodo',
       name:'listTodo',
       component: () => import(/* webpackChunkName: "about" */ './../components/listTodo.vue'), 
-    },    
+    },
     {
       path: '/promise',
       name:'promise',
       component: () => import(/* webpackChunkName: "about" */ './../components/promise.vue'), 
+    },
+    {
+      path: '/mock',
+      name:'mock',
+      component: () => import(/* webpackChunkName: "about" */ './../components/mock.vue'), 
     },
     { // 各种基础组件的书写
       path: '/basic',
@@ -144,11 +152,21 @@ export default new Router({
       path: '/crossDomain',
       name:'crossDomain',
       component: () => import(/* webpackChunkName: "about" */ './../components/crossDomain.vue'), 
-    },,
+    },
     { // 跨域组件的书写
       path: '/axios',
       name:'axios',
       component: () => import(/* webpackChunkName: "about" */ './../components/axios.vue'), 
+    },
+    { // 按需引入UI组件 
+      path: '/uiLoad',
+      name:'uiLoad',
+      component: () => import(/* webpackChunkName: "about" */ './../components/uiLoad.vue'), 
+    },,
+    { // 优雅的只在当前页面中覆盖ui库中组件的样式
+      path: '/uiChange',
+      name:'uiChange',
+      component: () => import(/* webpackChunkName: "about" */ './../components/uiChange.vue'), 
     },
     {
       path: '/route',

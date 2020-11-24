@@ -1,0 +1,8 @@
+{
+    id: '@id()', //随机生成id值
+    username: '@cname()', //随机生成中文名
+    date: '@date()', //随机生成日期
+    description: '@paragraph()', //随机生成描述
+    ip: '@ip()', //随机生成ip值
+    email: '@email()' //随机生成email值
+}

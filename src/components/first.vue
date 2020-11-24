@@ -81,16 +81,37 @@
     <button>
       <router-link to="axios">接口管理</router-link>
     </button>
+    <button>
+      <router-link to="uiLoad">UI库的按需加载</router-link>
+    </button>
+    <button>
+      <router-link to="uiChange">优雅的在当前页面中覆盖ui库中组件的样式</router-link>
+    </button>
+    <button>
+      <router-link to="mock">mock模拟接口数据</router-link>
+    </button>
   </div>
 </template>
 <script>
 let vm;
+import axios from 'axios'
 export default {
   components: {},
   data() {
     return {};
   },
-  methods: {},
+  mounted(){
+    this.getList()
+  },
+  methods: {
+    getList(){
+      axios.get('./use/useinfo').then(res=>{
+        console.log(res)
+      }).catch(err=>{
+        console.log(err)
+      })
+    }
+  },
 };
 </script>
 <style scoped>

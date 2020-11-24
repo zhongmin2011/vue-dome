@@ -1,15 +1,19 @@
 <template>
   <div class="content">
-    我是拷贝页面
+    我是拷贝页面 ------- 此页面有待补充
     <div class="show">
       <div>objMore：{{objMore}}</div>
     </div>
     <div class="deep">
       <button @click="shallow">我是浅拷贝</button>
+      <div>浅拷贝：只是拷贝数组或者对象的最上面一层</div>
+      <div>常见的浅拷贝：</div>
       <div class="text">copy: {{copy}}</div>
     </div>
     <div class="deep">
       <button @click="deepFunc(objMore,deepCopy)">我是深拷贝</button>
+      <div>深拷贝：拷贝数组或者对象上所有的属性值，一直拷贝对最深一层</div>
+      <div>常见的深拷贝：</div>
       <div class="text">deepCopy: {{deepCopy}}</div>
     </div>
     <div class="deep">
@@ -72,7 +76,7 @@ export default {
 .show, .deep, .shallow{
   padding: 10px;
 }
-.deep, .shallow{
+.shallow{
   display: flex;
 }
 .text{
