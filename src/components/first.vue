@@ -90,32 +90,46 @@
     <button>
       <router-link to="mock">mock模拟接口数据</router-link>
     </button>
+    <button>
+      <router-link to="/contain/card3">组件化容器</router-link>
+    </button>
   </div>
 </template>
 <script>
-let vm;
-import axios from 'axios'
+let vm
+import axios from "axios";
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      mekey: 'card2'
+    };
   },
-  mounted(){
-    this.getList()
+  mounted() {
+    this.getList();
   },
   methods: {
-    getList(){
-      axios.get('./use/useinfo').then(res=>{
-        console.log(res)
-      }).catch(err=>{
-        console.log(err)
-      })
-    }
+    getList() {
+      axios
+        .get("./use/useinfo")
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
   },
 };
 </script>
 <style scoped>
 .ly {
+  display: flex;
+}
+.roteLink {
+  border: 1px green solid;
+  margin-right: 15px;
+  padding: 8px;
   display: flex;
 }
 .mg-t20 {
@@ -131,4 +145,5 @@ export default {
   height: 34px;
   margin-right: 15px;
 }
+
 </style>

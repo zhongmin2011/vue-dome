@@ -162,11 +162,16 @@ export default new Router({
       path: '/uiLoad',
       name:'uiLoad',
       component: () => import(/* webpackChunkName: "about" */ './../components/uiLoad.vue'), 
-    },,
+    },
     { // 优雅的只在当前页面中覆盖ui库中组件的样式
       path: '/uiChange',
       name:'uiChange',
       component: () => import(/* webpackChunkName: "about" */ './../components/uiChange.vue'), 
+    },
+    { // 组件容器化改造
+      path: '/contain/:name',
+      name:'contain',
+      component: () => import(/* webpackChunkName: "about" */ './../components/contain.vue')
     },
     {
       path: '/route',
