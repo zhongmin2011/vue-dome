@@ -32,7 +32,6 @@ export default {
                 }, wait)
                 if (callNow) func.apply(context, args)
             } else {
-              debugger
                 timeout = setTimeout(function(){
                     func.apply(context, args)
                 }, wait);

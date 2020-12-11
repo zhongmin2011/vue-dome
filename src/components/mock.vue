@@ -204,7 +204,6 @@ export default {
   mounted() {
     this.getList();
     this.getUseInfo()
-    // console.log(process, "process.argv[3]");
   },
   methods: {
     getList() {

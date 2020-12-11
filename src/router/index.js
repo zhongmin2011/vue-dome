@@ -211,6 +211,16 @@ export default new Router({
         },
       ]
     },
+    {
+      path: '/detail',
+      name:'detail',
+      component: () => import(/* webpackChunkName: "about" */ './../components/detail/index.vue')
+    },
+    {
+      path: '/detail/:id',
+      name:'detailId',
+      component: () => import(/* webpackChunkName: "about" */ `./../components/detail/id.vue`)
+    },
     // 404，匹配所以找不到的页面路由  
     {
       path: '*',

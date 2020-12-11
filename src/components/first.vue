@@ -85,13 +85,16 @@
       <router-link to="uiLoad">UI库的按需加载</router-link>
     </button>
     <button>
-      <router-link to="uiChange">优雅的在当前页面中覆盖ui库中组件的样式</router-link>
+      <router-link to="uiChange">覆盖ui组件样式</router-link>
     </button>
     <button>
       <router-link to="mock">mock模拟接口数据</router-link>
     </button>
     <button>
       <router-link to="/contain/card3">组件化容器</router-link>
+    </button>
+    <button>
+      <router-link to="/detail">详情页路由详情</router-link>
     </button>
   </div>
 </template>

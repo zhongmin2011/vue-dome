@@ -20,14 +20,9 @@ export default {
   },
   methods: {
     getHandle(){
-      // axios.get(url,params){
-
-      // }
+      
     },
     postHandle(){
-      // axios.post(url,params){
-        
-      // }
     }
   }
 };
