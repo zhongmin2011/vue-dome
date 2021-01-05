@@ -1,27 +1,33 @@
 <template>
   <div class="dict">
     <div>我是dict页面</div>
+    <div>{{searchCondition.auditStatus}}345</div>
     <select-input
       v-model="searchCondition.auditStatus"
       :data="$dict.auditStatus"
-      placeholder="请选择审核状态"
+      placeholder="请选择状态"
     ></select-input>
+    <div>{{searchCondition.auditStatus}}345</div>
     <select-input
       v-model="searchCondition.inboundType"
       :data="$dict.inboundType"
-      placeholder="请选择审核状态"
+      placeholder="请选择状态"
     ></select-input>
   </div>
 </template>
 <script>
 import selectInput from "@/component/select-input.vue";
+
 export default {
   components: {
       selectInput
   },
   data() {
     return {
-      searchCondition: {}
+      searchCondition: {
+        auditStatus: '1',
+        inboundType: '2'
+      }
     };
   }
 };

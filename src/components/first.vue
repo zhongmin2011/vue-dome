@@ -96,6 +96,9 @@
     <button>
       <router-link to="/detail">详情页路由详情</router-link>
     </button>
+    <button>
+      <router-link to="/meta">meta页面</router-link>
+    </button>
   </div>
 </template>
 <script>

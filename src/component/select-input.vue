@@ -41,8 +41,11 @@ export default {
     this.selected = this.value
   },
   methods: {
-    handleChange(value) {},
-    handleSelect(value) {}
+    handleChange(value) {
+      this.selected = value;
+    },
+    handleSelect(value) {
+    }
   },
 };
 </script>
