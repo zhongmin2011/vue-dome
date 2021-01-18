@@ -9,8 +9,12 @@ const router = new Router({
     { // 路由重定向 的两种写法
       path: '/',
       redirect: '/first',// 重定向  也可以写成  redirect:{name:'first'}
-
     },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: () => import(/* webpackChunkName: "about" */ './../components/login.vue'),
+    // },
     {
       path: '/first',
       name: 'first',
@@ -235,6 +239,11 @@ const router = new Router({
         title: '首页',
         noLogin: true
       }
+    },
+    {
+      path: '/downAddUp',
+      name: 'downAddUp',
+      component: () => import(/* webpackChunkName: "about" */ './../components/downAddUp.vue')
     },
   ]
 })
