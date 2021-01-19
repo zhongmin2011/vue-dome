@@ -8,13 +8,13 @@ const router = new Router({
   routes: [
     { // 路由重定向 的两种写法
       path: '/',
-      redirect: '/first',// 重定向  也可以写成  redirect:{name:'first'}
+      redirect: '/login',// 重定向  也可以写成  redirect:{name:'first'}
     },
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: () => import(/* webpackChunkName: "about" */ './../components/login.vue'),
-    // },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import(/* webpackChunkName: "about" */ './../components/login.vue'),
+    },
     {
       path: '/first',
       name: 'first',

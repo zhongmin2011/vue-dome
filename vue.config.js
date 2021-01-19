@@ -18,19 +18,19 @@ module.exports = {
     devServer: {
         // 1，配置好后一定要关闭原来的server，重新npm run dev启动项目。不然无效。
         host: 'localhost',// 配置本地的ip地址
-        port: 8081,// 配置本地的端口地址
+        port: 8080,// 配置本地的端口地址
         open: true,
         hot: true, // 热更新
         proxy: {// 跨域配置，一下的配置就是代理付服务向跨域服务器进行处理的过程
-            'api':{ // 我们要请求的接口域名。如果不想每次接口都带上/api，可以更改axios的默认配置axios.defaults.baseURL = '/api';
-                target: 'http://localhost:3000', // 即将要跨域的域名
-                changeOrion: true, // 是否开启跨域
+            '/apn/v1/console': {// 我们要请求的接口域名。如果不想每次接口都带上/api，可以更改axios的默认配置axios.defaults.baseURL = '/api';
+                changeOrigin: true,
+                target: 'http://10.139.18.182:9000', //开发环境
                 pathRewrite: {
-                    '^/api': ''
-                }
-            }
+                    '^apn/v1/console': ''
+                },
+            },
         },
-        before: require('./mock/index.js') // 引入mock/index.js
+        // before: require('./mock/index.js') // 引入mock/index.js
     },
     // 2，直接配置跨域的域名及端口号
     // devServer: {

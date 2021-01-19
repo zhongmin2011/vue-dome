@@ -12,7 +12,7 @@ import base from './base'; // 导入接口域名列表
 // 开发环境 开发环境时程序员专门用于开发的服务器，配置可以比较随意，
 // 为了开发调试方便，一般打开全部错误报告和测试工具，是最基础的环境
 if (process.env.NODE_ENV == 'development') {
-    axios.defaults.baseURL = 'https://www.development.com';
+    // axios.defaults.baseURL = 'https://www.development.com';
 }
 // 测试环境 一般是克隆一份生产环境的配置，一个程序在测试环境工作不正常，那么肯定不能把它发布到生产机上。
 // (程序员开发完成后，交给测试部门全面的测试，看看所实现的功能有没有bug，测试人员会模拟各种操作情况；)

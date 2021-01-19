@@ -11,6 +11,7 @@ import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 import api from './network/api' 
 import './mock';
+import './utils/http.js';
 
 // 将api挂载到vue的原型上
 Vue.prototype.$api = api;

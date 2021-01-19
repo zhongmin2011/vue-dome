@@ -1,4 +1,4 @@
-// import axios from 'axios'
+import axios from 'axios'
 
 // // 创建一个axios的对象
 // const instance = axios.create({
@@ -75,3 +75,47 @@
 //         // 3，如果请求失败了 reject
 //     })
 // }
+
+export default {
+    baseURL: '/apn/v1/console',
+    get(url, params) {
+      return axios.get(this.linkUrl(url), {
+          params: params,
+          headers: {
+            Pragma: 'no-cache',
+          },
+        })
+        .then(function(response) {
+          return response;
+      });
+    },
+    post(url, data) {
+      return axios.post(this.linkUrl(url), data).then(function(response) {
+        return response;
+      });
+    },
+    delete(url, params) {
+      return axios
+        .delete(this.linkUrl(url), {
+          params: params,
+        })
+        .then(function(response) {
+          return response;
+        });
+    },
+    put(url, data) {
+      return axios.put(this.linkUrl(url), data).then(function(response) {
+        return response;
+      });
+    },
+  
+    /**
+     * 拼接url+BASE_PATH
+     * @param {string} url
+     * @returns {string}
+     * @private
+     */
+    linkUrl(url) {
+      return this.baseURL + url;
+    }
+  };
